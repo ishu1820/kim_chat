@@ -4,20 +4,22 @@ import { ToastContainer, toast } from 'react-toastify';
 
 export default function SignUp() {
 
-
+    // updates value of input fields
     let [formData, setFormData] = React.useState({
         name: '',
         username: '',
         email: '',
         password: ''
     });
-
+    
+    // get value of input fields
     let getValue = (e) => {
         let oldData = { ...formData }
         oldData[e.target.name] = e.target.value
         setFormData(oldData)
     }
 
+    // reset form fields
     let resetForm = () => {
         setFormData({
             name: '',
@@ -27,10 +29,12 @@ export default function SignUp() {
         })
     }
 
+
+    // submit form data
     let submitData = (e) => {
 
-        e.preventDefault();
-        axios.post("http://localhost:3000/api/auth/signup", formData).then((res) => {
+        e.preventDefault();     // prevent page from reloading
+        axios.post(import.meta.env.VITE_REACT_APP_SIGNUP_API_URL, formData).then((res) => {  // post data to server
             console.log(res.data)
             toast.success('User registered successfully')
         }).then((res) => {
@@ -42,7 +46,7 @@ export default function SignUp() {
 
     return (
         <form className="m-3.5 p-4 border border-gray-900/10 rounded-4xl shadow-md">
-            <ToastContainer />
+            <ToastContainer />  {/* toast container gives a message at top right corner*/}
             <div className="space-y-12">
                 <div className="border-b border-gray-900/10 pb-12">
                     <h2 className="text-base/7 font-semibold text-gray-900">Sign Up</h2>
