@@ -1,6 +1,6 @@
 name: "Advanced CodeQL Config"
 queries:
-  - uses: github/codeql/javascript-queries@latest
-  - uses: github/codeql/typescript-queries@latest
-  - uses: github/codeql/security-extended-queries@latest
-  - uses: github/codeql/security-and-quality-queries@latest
+  - uses: github/codeql/javascript-queries@master
+  - uses: github/codeql/typescript-queries@master
+  - uses: github/codeql/security-extended-queries@master
+  - uses: github/codeql/security-and-quality-queries@master
