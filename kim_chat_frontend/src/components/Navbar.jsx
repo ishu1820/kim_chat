@@ -12,23 +12,6 @@ function Navbar() {
                 <div id="title" className="text-2xl font-bold">
                     <h1>KIM CHAT</h1>
                 </div>
-
-                <div id="navItems" className="flex items-center fixed right-20 font-black">
-                    <ul className="flex items-center">
-                        <li className="m-2 hover:bg-blue-700">
-                            <a href="">Home</a>
-                        </li>
-                        <li className="m-2  hover:bg-blue-700">
-                            <a href="">About</a>
-                        </li>
-                        <li className="m-2  hover:bg-blue-700">
-                            <a href="">Login</a>
-                        </li>
-                        <li className="m-2  hover:bg-blue-700">
-                            <a href="">Sign Up</a>
-                        </li>
-                    </ul>
-                </div>
             </nav>
         </>
     );
