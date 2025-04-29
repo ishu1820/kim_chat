@@ -33,7 +33,7 @@ function Chatbox({ messages = [], onSendMessage }) {
                     type="text"
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
-                    onKeyPress={handleKeyPress}
+                    onKeyDown={handleKeyPress}
                     placeholder="Type a message..."
                     className="flex-1 p-2 border rounded"
                 />
