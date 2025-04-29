@@ -4,7 +4,7 @@ function Navbar() {
     
     return (
         <>
-            <nav className="navbar bg-amber-300 p-4 m-1 flex items-center">
+            <nav className="navbar bg-#202020 p-4 m-1 flex items-center">
                 <div id="logo">
                     <img src="kim.svg" alt="logo" className="w-30 p-1 m-0.5" />
                 </div>

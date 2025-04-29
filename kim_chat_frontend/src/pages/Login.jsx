@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
@@ -22,11 +23,15 @@ function Login() {
     });
   };
 
+  const Navigate = useNavigate(); // for navigation
+
   let submitData = (e) => {
     e.preventDefault();
     axios.post(import.meta.env.VITE_REACT_APP_LOGIN_API_URL, formData).then((res) => {
       console.log(res.data)
+      localStorage.setItem('token', res.data.token); // Store the token in localStorage
       toast.success('User logged in successfully')
+      Navigate('/chat', { replace: true })
     }).then((res) => {
       resetForm();
     })
