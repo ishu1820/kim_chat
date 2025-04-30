@@ -27,7 +27,7 @@ const Sidebar = ({ onSelectChat }) => {
         {chats.map((chat) => (
           <li
             key={chat.id}
-            className="p-2 bg-white rounded shadow cursor-pointer hover:bg-gray-200"
+            className="p-2 bg-white rounded shadow cursor-pointer hover:bg-purple-400"
             onClick={() => onSelectChat(chat)}
           >
             {chat.name}
